@@ -11,19 +11,13 @@ tip = float(input("What percentage tip would you like to give? 10, 12, or 15? ")
 people = int(input("How many people to split the bill? "))
 
 # Find the percentage amount by diving the tip by 100
-tip_percentage = tip / 100
-
-# Add percentage amount to the bill
-bill_end = round(bill * tip_percentage, 2)
-
-# Redefine bill variable to include the tip percentage
-bill += bill_end
+bill_with_tip = tip / 100 * bill + bill
 
 # Divide the total bill by the people paying
-end_result = bill / people 
+end_result = bill_with_tip / people 
 
 # Round the result to two digits and set as a last variable
 rounded_result = round(end_result, 2)
 
 # Print the result
-print(rounded_result)
+print(f"Each person should pay ${rounded_result}.")
