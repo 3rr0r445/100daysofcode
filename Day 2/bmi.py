@@ -12,7 +12,7 @@ weight = int(weight)
 
 bmi = weight / (height * height)
 
-# Convert the result into an integet and print it to screen
+# Convert the result into an integer and print it to screen
 print (int(bmi))
 
 # Convert to Imperial instead of Metric? Freedom Units?
