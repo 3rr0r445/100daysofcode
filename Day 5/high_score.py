@@ -9,3 +9,10 @@ print(student_scores)
 # Do not use the max function to do it easily. 
 # Probably will use a loop and conditionals.
 
+max_value = student_scores[0]
+
+# No conditionals. Just a for loop.
+for n in student_scores[1:]:
+    if n > max_value:
+        max_value = n
+    print(max_value)
