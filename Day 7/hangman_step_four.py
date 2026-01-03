@@ -66,7 +66,7 @@ word_length = len(chosen_word)
 
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
 #Set 'lives' to equal 6.
-
+lives = 6
 #Testing code
 print(f'Pssst, the solution is {chosen_word}.')
 
@@ -88,6 +88,12 @@ while not end_of_game:
     #TODO-2: - If guess is not a letter in the chosen_word,
     #Then reduce 'lives' by 1. 
     #If lives goes down to 0 then the game should stop and it should print "You lose."
+    if letter != guess:
+        lives -= 1
+    if lives < 1:
+        print("You lose!")
+        break
+    
 
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
