@@ -28,3 +28,6 @@ while not end_of_game:
             display[position] = letter
 
     print(display)
+    if "_" not in display:
+        end_of_game = True
+        print("You win! Congratulations!")
